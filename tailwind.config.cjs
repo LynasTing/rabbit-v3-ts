@@ -14,7 +14,15 @@ module.exports = {
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
-    }
+    },
+    textColor: {
+      'ccc': '#ccc'
+    },
+    backgroundColor: theme => ({
+      ...theme('colors'),
+      '333': '#333',
+      'page-f5': '#F5F5F5'
+    })
   },
   plugins: [],
 }

@@ -1,5 +1,5 @@
 <template>
-  <RouterView></RouterView>
+  <RouterView />
 </template>
 
 <script setup lang='ts'>
@@ -15,6 +15,5 @@ testData()
 .app {
   background-color: $warnColor;
   @include hoverShadow()
-
 }
 </style>    
