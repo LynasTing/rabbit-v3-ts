@@ -2,18 +2,18 @@
 * {
   box-sizing: border-box;
 }
-ul, h1, h3, h4, p, dl, dd {
+/* ul, h1, h3, h4, p, dl, dd {
   margin: 0;
   padding: 0;
-}
-body {
-  height: 100%;
-  color: #333;
-  min-width: 1240px;
-  font: 1em/1.4 'Microsoft Yahei', 'PingFang SC', 'Avenir', 'Segoe UI', 'Hiragino Sans GB',
-    'STHeiti', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
-}
+} */
+// body {
+//   height: 100%;
+//   color: #333;
+//   min-width: 1240px;
+//   font: 1em/1.4 'Microsoft Yahei', 'PingFang SC', 'Avenir', 'Segoe UI', 'Hiragino Sans GB',
+//     'STHeiti', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
+// }
 .cus-container {
-  width: 1200px;
+  width: 1240px;
   margin: 0 auto;
 }

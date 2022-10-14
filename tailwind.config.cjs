@@ -21,7 +21,8 @@ module.exports = {
     backgroundColor: theme => ({
       ...theme('colors'),
       '333': '#333',
-      'page-f5': '#F5F5F5'
+      'page-f5': '#F5F5F5',
+      'down': '#27ba9b !important'
     })
   },
   plugins: [],

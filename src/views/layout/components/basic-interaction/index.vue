@@ -1,9 +1,9 @@
 <template>
-  <div class="basic-interaction">
-    <ul>
-      <li v-for="(item, index) in childrenNav" :key="index"><a href="javascript: void(0)">{{ item }}</a></li>
-    </ul>
-  </div>
+  <ul class="basic-interaction cus-container flex px-20 items-center">
+    <li v-for="(item, index) in childrenNav" :key="index" class="mr-14" >
+      <a href="javascript: void(0)" class="inline-block h-24">{{ item }}</a>
+    </li>
+  </ul>
 </template>
 
 <script setup lang='ts' name="BasicInteraction">
@@ -14,6 +14,8 @@ const childrenNav: Array<string> = ['糕点', '糖巧', '坚果', '蜜饯', '冲
 
 <style lang='scss' scoped>
 .basic-interaction {
-
+  li > a {
+    line-height: 96px;
+  }
 }
 </style>

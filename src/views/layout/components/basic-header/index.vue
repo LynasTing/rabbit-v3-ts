@@ -12,7 +12,7 @@
       <!-- search -->
       <div class="search-box flex items-center rounded-full mx-10 pl-2 " :class="isFocus ? 'longInput':''">
         <i class="iconfont icon-search text-sm mr-1"></i>
-        <input type="text" placeholder="请输入搜索商品" class="text-sm rounded-full pl-1" @onfocus="searchBoxOnBlur" />
+        <input type="text" placeholder="请输入搜索商品" class="text-sm rounded-full pl-1" @change="searchBoxOnBlur" />
       </div>
       <!-- buyCar -->
       <div class="buy-car">
@@ -22,11 +22,13 @@
         </a>
       </div>
     </div>
+    <BasicInteraction />
   </header>
 </template>
 
 <script setup lang='ts' name="BasicHeader">
 import { ref } from 'vue'
+import BasicInteraction from '@/views/layout/components/basic-interaction/index.vue'
 const isFocus = ref(false)
 const goodsCategories = ref(['首页', '美食', '餐厨', '艺术', '电脑', '居家', '洗护', '孕婴', '服装', '杂货']) 
 
