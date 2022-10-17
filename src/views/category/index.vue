@@ -1,6 +1,7 @@
 <template>
   <div class=''>
     分类组件
+    <!-- 新分支 -->
   </div>
 </template>
 
