@@ -1,1 +1,1 @@
-export const goodsCategories = ['首页', '美食', '餐厨', '艺术', '电脑', '居家', '洗护', '孕婴', '服装', '杂货'] 
+export const goodsCategories = ['居家', '美食', '服饰', '母婴', '个护', '严选', '数码', '运动', '杂货'] 

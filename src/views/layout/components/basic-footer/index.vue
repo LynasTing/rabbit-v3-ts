@@ -72,7 +72,7 @@
     </div>
   </footer>
 </template>
-<script setup lang='ts' name="basicFooter">
+<script setup lang='ts' name="BasicFooter">
  
 </script>
 <style lang='scss' scoped>

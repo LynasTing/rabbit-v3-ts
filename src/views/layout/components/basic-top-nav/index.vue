@@ -1,5 +1,5 @@
 <template>
-  <header class="basic-top-nav bg-333 h-14">
+  <header class="basic-top-nav bg-333">
     <div class="cus-container w-full h-full flex justify-between items-center">
       <div><a href="javascript:void(0)" class="text-ccc"><i class="iconfont icon-user mr-2"></i>丁凌</a></div>
       <ul class="menu-list text-ccc text-sm flex items-center h-full">
@@ -22,6 +22,7 @@ import { ref } from 'vue'
 
 <style lang='scss' scoped>
 .basic-top-nav {
+  height: 53px;
   .menu-list {
     li {
       padding-left: 7px;
