@@ -2,7 +2,10 @@
   <div class="layout bg-page-f5 h-full">
     <BasicTopNav />
     <BasicHeader />
-    <BasicInteraction />
+    <!-- 路由出口 -->
+    <main class="basic-main">
+      <RouterView />
+    </main>
     <basicFooter />
   </div>
 </template>
@@ -10,7 +13,6 @@
 // 公共布局组件
 import BasicTopNav from '@/views/layout/components/basic-top-nav/index.vue'
 import BasicHeader from '@/views/layout/components/basic-header/index.vue'
-import BasicInteraction from '@/views/layout/components/basic-interaction/index.vue'
 import basicFooter from '@/views/layout/components/basic-footer/index.vue'
 // test
 </script>
@@ -22,5 +24,7 @@ import basicFooter from '@/views/layout/components/basic-footer/index.vue'
 
 
 <style lang='scss' scoped>
-
+.basic-main {
+  min-height: 600px;
+}
 </style>

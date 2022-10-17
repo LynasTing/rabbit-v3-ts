@@ -1,13 +1,26 @@
 <template>
-  <header class='basic-header h-28 bg-white'>
-    <div class="cus-container w-full h-full flex items-center justify-evenly ">
+  <header class='basic-header h-28 bg-white z-50'>
+    <div class="cus-container w-full h-full flex items-center justify-evenly">
       <!-- logo -->
-        <h2 class="logo-img h-full mr-10">
-          <RouterLink to="/" />
-        </h2>
+      <h2 class="logo-img h-full mr-10">
+        <RouterLink to="/" />
+      </h2>
       <!-- tab -->
-      <ul class="flex goods items-center justify-between">
-        <li v-for="(item, index) in goodsCategories" :key="index" ><a href="javascript: void(0)" class="pb-2">{{ item }}</a></li>
+      <ul class="flex goods items-center justify-between relative">
+        <li v-for="(item, index) in category.categoryList" :key="index" @mouseenter="category.show(item.id)" @mouseleave="category.hide(item.id)">
+          <RouterLink :to="`/category/:${item.id}`" class="pb-2">{{ item.name }}</RouterLink>
+          <!-- 二级菜单 -->
+          <div class="cus-container bg-white absolute h-0 overflow-hidden opacity-0 submenu" :class="{subShow: item.open}">
+            <ul class="basic-interaction flex flex-wrap px-16 items-center h-full">
+              <li v-for="sub in item.children" :key="sub.id" class="w-28 flex flex-col items-center">
+                 <RouterLink :to="`/category/sub/${sub.id}`">
+                    <img :src="sub.picture" alt="好吃的" class="w-16 h-16">
+                    <p class="pt-3 text-center text-sm">{{ sub.name }}</p>
+                 </RouterLink>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
       <!-- search -->
       <div class="search-box flex items-center rounded-full mx-10 pl-2 " :class="isFocus ? 'longInput':''">
@@ -22,16 +35,16 @@
         </a>
       </div>
     </div>
-    <BasicInteraction />
   </header>
 </template>
 
 <script setup lang='ts' name="BasicHeader">
 import { ref } from 'vue'
-import BasicInteraction from '@/views/layout/components/basic-interaction/index.vue'
+import useStore from '@/store'
 const isFocus = ref(false)
-const goodsCategories = ref(['首页', '美食', '餐厨', '艺术', '电脑', '居家', '洗护', '孕婴', '服装', '杂货']) 
 
+const { category } = useStore()
+category.getAllCategory()
 const searchBoxOnBlur = () :void =>  {
   isFocus.value = true
 }
@@ -49,12 +62,24 @@ const searchBoxOnBlur = () :void =>  {
     }
   }
  .goods {
-    // width: 760px;
     flex: 1;
     & > li > a:hover {
       color: $xtxColor;
       border-bottom: 1px solid $xtxColor;
     }
+  }
+  .submenu {
+    left: -200px;
+    top: 56px;
+    box-shadow: 0 0 5px #ccc;
+    transition: all 0.2s 0.1s;
+    a:hover {
+      color: $xtxColor;
+    }
+  }
+  .subShow {
+    height: 132px;
+    opacity: 1;
   }
   .search-box {
     width: 170px;

@@ -43,12 +43,37 @@
     </div>
     <!-- 下部 -->
     <div class="bottom bg-333">
-      底部2
+      <ul class="tags cus-container flex items-center justify-around">
+        <li>
+          <i class="iconfont icon-footer01"></i>
+          <span>价格亲民</span>
+          </li>
+        <li>
+          <i class="iconfont icon-footer02"></i>
+          <span>物流快捷</span>
+          </li>
+        <li>
+          <i class="iconfont icon-footer03"></i>
+          <span>品质新鲜</span>
+        </li>
+      </ul>
+      <footer class="flex flex-col items-center  pt-10 text-sm  ">
+        <ul class="flex about-us">
+          <li><a href="javascript: void(0)">关于我们</a></li>
+          <li><a href="javascript: void(0)">帮助中心</a></li>
+          <li><a href="javascript: void(0)">售后服务</a></li>
+          <li><a href="javascript: void(0)">配送与验收</a></li>
+          <li><a href="javascript: void(0)">商务合作</a></li>
+          <li><a href="javascript: void(0)">搜索推荐</a></li>
+          <li><a href="javascript: void(0)">友情链接</a></li>
+        </ul>
+        <div class="copy-right mt-5">CopyRight © 小兔鲜儿</div>
+      </footer>
     </div>
   </footer>
 </template>
 <script setup lang='ts' name="basicFooter">
-import { ref } from 'vue'
+ 
 </script>
 <style lang='scss' scoped>
 .basic-footer {
@@ -122,6 +147,37 @@ import { ref } from 'vue'
       }
     }
   }
-  
+  .bottom {
+    height: 348px;
+    color: #999;
+    .tags {
+      height: 178px;
+      color: white;
+      border-bottom: 1px solid #434343;
+      li {
+        i {
+          font-size: 50px;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        span {
+          font-size: 28px;
+        }
+      }
+    }
+    .about-us {
+      a {
+        display: inline-block;
+        padding: 0 10px;
+        border-right: 1px solid #999;
+        &:hover {
+          color: $xtxColor;
+        }
+      }
+      & li:last-child a{
+        border: none;
+      }  
+    }
+  }
 }
 </style>
