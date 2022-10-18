@@ -5,25 +5,28 @@ module.exports = {
   content: [],
   theme: {
     extend: {},
+    // textColor: theme => theme('colors'),
+    textColor: {
+      white: 'white',
+      'ccc': '#ccc',
+      'xtxColor': '#27ba9b'
+    },
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.trueGray,
+      // gray: colors.trueGray,
       indigo: colors.indigo,
       red: colors.rose,
       yellow: colors.amber,
-    },
-    textColor: {
-      'ccc': '#ccc',
-      'xtxColor': '#27ba9b'
     },
     backgroundColor: theme => ({
       ...theme('colors'),
       '333': '#333',
       'page-f5': '#F5F5F5',
-      'down': '#27ba9b !important'
+      'down': '#27ba9b !important',
+      'xtxColor': '#27ba9b'
     })
   },
   plugins: [],

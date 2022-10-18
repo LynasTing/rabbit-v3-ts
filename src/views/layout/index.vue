@@ -27,6 +27,6 @@ import BasicSticky from '@/views/layout/components/basic-sticky/index.vue'
 
 <style lang='scss' scoped>
 .basic-main {
-  min-height: 600px;
+  // min-height: 600px;
 }
 </style>

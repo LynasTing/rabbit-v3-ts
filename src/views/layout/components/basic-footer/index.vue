@@ -26,7 +26,7 @@
             <dd class="flex flex-col justify-center">
               <span>扫描二维码</span>
               <span>立马下载APP</span>
-              <a href="javascript:void(0)" class="w-24 bg-down text-white leading-8 h-8">下载页面</a>
+              <a href="javascript:void(0)" class="w-24 bg-down text-white h-8">下载页面</a>
             </dd>
           </div>
         </dl>
@@ -125,6 +125,7 @@
           font-size: 14px;
           text-align: center;
           color: white;
+          line-height: 32px;
         }
       }
       .down-img {

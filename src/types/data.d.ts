@@ -8,7 +8,23 @@ export interface ApiRes<T> {
 export interface CategoryItem {
   id: string
   name: string
-  picture: T
+  picture: string
   open: boolean
   children: CategoryItem[]
+  goods: CategoryGoods[]
+}
+// 单个商品
+export type CategoryGoods = {
+  desc: string
+  id: string
+  name: string
+  picture: string
+  price: string
+}
+// 轮播图类型
+export type BannerItem = {
+  hrefUrl: string
+  id: string
+  imgUrl: string
+  type: string
 }
