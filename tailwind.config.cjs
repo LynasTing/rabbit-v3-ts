@@ -16,7 +16,8 @@ module.exports = {
       yellow: colors.amber,
     },
     textColor: {
-      'ccc': '#ccc'
+      'ccc': '#ccc',
+      'xtxColor': '#27ba9b'
     },
     backgroundColor: theme => ({
       ...theme('colors'),

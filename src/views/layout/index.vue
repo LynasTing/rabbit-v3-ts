@@ -2,7 +2,7 @@
   <div class="layout bg-page-f5 h-full">
     <BasicTopNav />
     <BasicHeader />
-    <!-- <BasicSticky /> -->
+    <BasicSticky />
     <!-- 路由出口 -->
     <main class="basic-main">
       <RouterView />

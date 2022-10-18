@@ -32,7 +32,6 @@ export default defineStore('category', {
     },
     // 控制二级菜单显示
     show(id: string) {
-      console.log(`1 + ::>>`, )
       const category = this.categoryList.find(item => item.id === id)
       category!.open = true
     },
