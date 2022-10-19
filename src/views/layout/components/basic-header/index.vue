@@ -30,7 +30,7 @@
       <!-- buyCar -->
       <div class="buy-car">
         <a class="block relative text-white" href="javascript: void(0)">
-          <i class="iconfont icon-cart text-xl " />
+          <i class="iconfont icon-cart text-xl" />
           <em class="absolute text-xs not-italic py-0.5 px-1.5 ml-0.5 ">2</em>
         </a>
       </div>
@@ -92,6 +92,9 @@ const searchBoxOnBlur = () :void =>  {
     }
   }
   .buy-car {
+    i {
+      color: #333;
+    }
     em {
       color: white;
       background-color: $helpColor;
