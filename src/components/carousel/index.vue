@@ -1,5 +1,5 @@
 <template>
-  <div class='carousel cus-container relative h-500px hover:carousel_hover' @mouseenter="play" @mouseleave="stop">
+  <div class='carousel cus-container relative h-500px hover:carousel_hover z-10' @mouseenter="stop" @mouseleave="play">
     <!-- 图 -->
     <ul class="ul_wrap w-full h-full relative">
       <li 
@@ -53,12 +53,12 @@ const next = () => {
   actIndex.value >= props.slides.length - 1 ? actIndex.value = 0 : actIndex.value++
 }
 const play = () => {
-  if(props.autoPlay) return
-  timer = setInterval(()=> {
+  if(!props.autoPlay) return
+  timer = window.setInterval(()=> {
     next()
   }, props.duration)
 }
-let timer = ref(-1)
+let timer = -1
 const stop = () => {
   clearInterval(timer)
 }

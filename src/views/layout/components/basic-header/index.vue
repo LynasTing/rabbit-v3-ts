@@ -10,7 +10,7 @@
         <li v-for="(item, index) in category.categoryList" :key="index" @mouseenter="category.show(item.id)" @mouseleave="category.hide(item.id)">
           <RouterLink :to="`/category/:${item.id}`" class="pb-2">{{ item.name }}</RouterLink>
           <!-- 二级菜单 -->
-          <div class="cus-container bg-white absolute h-0 overflow-hidden opacity-0 submenu" :class="{subShow: item.open}">
+          <div class="cus-container bg-white absolute h-0 overflow-hidden opacity-0 submenu z-40" :class="{subShow: item.open}">
             <ul class="flex flex-wrap px-16 items-center h-full">
               <li v-for="sub in item.children" :key="sub.id" class="w-28 ">
                 <RouterLink :to="`/category/sub/${sub.id}`" class="flex flex-col items-center">
@@ -42,7 +42,7 @@
 import { ref } from 'vue'
 import useStore from '@/store'
 const { category } = useStore()
-category.getAllCategory()
+// category.getAllCategory()
 const isFocus = ref(false)
 const searchBoxOnBlur = () :void =>  {
   isFocus.value = true
@@ -69,7 +69,7 @@ const searchBoxOnBlur = () :void =>  {
     }
   }
   .submenu {
-    left: -200px;
+    left: -220px;
     top: 56px;
     box-shadow: 0 0 5px #ccc;
     transition: all 0.2s 0.1s;

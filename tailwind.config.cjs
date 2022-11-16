@@ -9,7 +9,10 @@ module.exports = {
     textColor: {
       white: 'white',
       'ccc': '#ccc',
-      'xtxColor': '#27ba9b'
+      'xtxColor': '#27ba9b',
+      '666':'#666',
+      '999':'#999',
+      priceColor: '#cf4444'
     },
     colors: {
       transparent: 'transparent',
@@ -26,7 +29,9 @@ module.exports = {
       '333': '#333',
       'page-f5': '#F5F5F5',
       'down': '#27ba9b !important',
-      'xtxColor': '#27ba9b'
+      'xtxColor': '#27ba9b',
+      layerBg: '#e3f9f4'
+
     })
   },
   plugins: [],

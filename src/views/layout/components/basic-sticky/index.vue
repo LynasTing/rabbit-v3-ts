@@ -20,7 +20,7 @@
 import useStore from '@/store'
 import { useWindowScroll } from '@vueuse/core'
 const { category } = useStore()
-category.getAllCategory()
+// category.getAllCategory()
 // 控制是否显示吸顶组件
 const { y } = useWindowScroll()
 </script>
