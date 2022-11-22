@@ -67,9 +67,4 @@
     background: $xtxColor;
   }
 }
-// .side_box:hover {
-//   article {
-//     display: block;
-//   }
-// }
 </style>

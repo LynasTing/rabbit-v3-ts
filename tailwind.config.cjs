@@ -9,7 +9,7 @@ module.exports = {
     textColor: {
       white: 'white',
       'ccc': '#ccc',
-      'xtxColor': '#27ba9b',
+      xtxColor: '#27ba9b',
       '666':'#666',
       '999':'#999',
       priceColor: '#cf4444'

@@ -8,7 +8,6 @@
 </template>
 
 <script setup lang='ts' name="Home">
-import { ref } from 'vue'
 import useStore from '@/store'
 import HomeBanner from './components/home-banner/index.vue' 
 import HomeCategory from './components/home-category/index.vue' 
