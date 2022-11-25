@@ -1,5 +1,5 @@
 <template>
-  <div class="layout bg-page-f5 h-full">
+  <div class="layout h-full">
     <BasicTopNav />
     <BasicHeader />
     <BasicSticky />
@@ -16,7 +16,6 @@ import BasicTopNav from '@/views/layout/components/basic-top-nav/index.vue'
 import BasicHeader from '@/views/layout/components/basic-header/index.vue'
 import BasicFooter from '@/views/layout/components/basic-footer/index.vue'
 import BasicSticky from '@/views/layout/components/basic-sticky/index.vue'
-// test
 </script>
 <script lang='ts' name="Layout">
   export default {
@@ -26,7 +25,5 @@ import BasicSticky from '@/views/layout/components/basic-sticky/index.vue'
 
 
 <style lang='scss' scoped>
-.basic-main {
-  // min-height: 600px;
-}
+.basic-main {}
 </style>

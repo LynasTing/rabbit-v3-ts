@@ -5,6 +5,7 @@ module.exports = {
   content: [],
   theme: {
     extend: {},
+  
     // textColor: theme => theme('colors'),
     textColor: {
       white: 'white',
@@ -30,8 +31,8 @@ module.exports = {
       'page-f5': '#F5F5F5',
       'down': '#27ba9b !important',
       'xtxColor': '#27ba9b',
+      goods: '#f0f9f4',
       layerBg: '#e3f9f4'
-
     })
   },
   plugins: [],

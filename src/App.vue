@@ -8,6 +8,5 @@
 <style lang='scss' scoped>
 .app {
   background-color: $warnColor;
-  @include hoverShadow()
 }
 </style>    
