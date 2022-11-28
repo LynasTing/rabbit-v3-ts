@@ -9,7 +9,8 @@
     </main>
     <!-- 新鲜好物和人气推荐 -->
     <HomeFreshProduce />
-    
+    <!-- 热门品牌 -->
+    <HomeBrand />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import useStore from '@/store'
 import HomeBanner from './components/home-banner/index.vue' 
 import HomeCategory from './components/home-category/index.vue' 
 import HomeFreshProduce from './components/home-fresh-produce/index.vue'
+import HomeBrand from './components/home-brand/index.vue'
 const { home }  = useStore() 
 home.getBannerList()
   

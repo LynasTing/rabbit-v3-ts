@@ -1,11 +1,12 @@
 import { defineStore } from 'pinia'
 import request from '@/utils/request'
-import { ApiRes, BannerItem, newGoods, HotGoods } from '@/types/data'
+import { ApiRes, BannerItem, NewGoods, HotGoods, Brand } from '@/types/data'
 export default defineStore('home', {
   state : ()=> ({
     bannerList: [] as BannerItem[],
-    newGoodList: [] as newGoods[],
-    hotGoodList: [] as HotGoods[]
+    newGoodList: [] as NewGoods[],
+    hotGoodList: [] as HotGoods[],
+    brandList: [] as Brand[]
   }),
   actions: {
     // 轮播图数据
@@ -19,10 +20,15 @@ export default defineStore('home', {
     },
     // 人气推荐数据
     async getRecommend() {
-      const newRes = await request.get<ApiRes<newGoods[]>>('/home/new')
+      const newRes = await request.get<ApiRes<NewGoods[]>>('/home/new')
       if(newRes.data?.code === '1') this.newGoodList = newRes.data?.result
       const hotRes = await request.get<ApiRes<HotGoods[]>>('/home/hot')
       if(hotRes.data?.code === '1') this.hotGoodList = hotRes.data?.result
-    }
+    },
+    // 热门品牌数据
+    async getBrandList() {
+      const res = await request.get<ApiRes<Brand[]>>('/home/brand')
+      if(res.data?.code === '1') this.brandList = res.data?.result
+    },
   }
 })

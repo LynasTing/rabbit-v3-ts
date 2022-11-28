@@ -29,7 +29,7 @@ export type BannerItem = {
   type: string
 }
 // 新鲜好物
-export type newGoods = {
+export type NewGoods = {
   desc: string
   id: string
   name: string
@@ -42,4 +42,15 @@ export type HotGoods = {
   picture: string ,
   title: string ,
   alt: string 
+}
+// 热门品牌
+export type Brand = {
+  id: string
+  name: string
+  nameEn: string
+  logo: string
+  picture: string
+  type?: any
+  desc: string
+  place: string
 }

@@ -9,7 +9,6 @@ export default {
     app.component('XtxSkeleton', XtxSkeleton)
     app.component('Carousel', Carousel)
     app.component('FindMore', FindMore)
-    // 自定义指令
     /**
      * vue3自定义指令
      * app = createApp(App)
@@ -31,6 +30,7 @@ export default {
      *  使用: v-指令名: 属性.修饰符 = '值'
      * })
      */
+    // 自定义指令 实现图片懒加载
     app.directive('lazy', {
       mounted(el: HTMLImageElement, { value }) {
         /**

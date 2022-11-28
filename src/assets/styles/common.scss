@@ -2,18 +2,22 @@
 * {
   box-sizing: border-box;
 }
-/* ul, h1, h3, h4, p, dl, dd {
-  margin: 0;
-  padding: 0;
-} */
-// body {
-//   height: 100%;
-//   color: #333;
-//   min-width: 1240px;
-//   font: 1em/1.4 'Microsoft Yahei', 'PingFang SC', 'Avenir', 'Segoe UI', 'Hiragino Sans GB',
-//     'STHeiti', 'Microsoft Sans Serif', 'WenQuanYi Micro Hei', sans-serif;
-// }
 .cus-container {
   width: 1240px;
   margin: 0 auto;
+}
+// 离开的淡出动画
+.fade {
+  &-leave-from {
+    opacity: 1;
+  }
+  &-leave-active{
+    position: absolute;
+    width: 100%;
+    transition: opacity .5s .2s;
+    z-index: 1;
+  }
+  &-leave-to {
+    opacity: 0;
+  }
 }

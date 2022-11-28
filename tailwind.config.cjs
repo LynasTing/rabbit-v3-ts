@@ -31,6 +31,7 @@ module.exports = {
       'page-f5': '#F5F5F5',
       'down': '#27ba9b !important',
       'xtxColor': '#27ba9b',
+      ccc: '#ccc',
       goods: '#f0f9f4',
       layerBg: '#e3f9f4'
     })

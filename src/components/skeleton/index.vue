@@ -15,11 +15,11 @@ defineProps({
   },
   animated: {
     type: Boolean,
-    default: false
+    default: true
   },  
   fade: {
     type: Boolean,
-    default: false
+    default: true
   }
 })
 </script>

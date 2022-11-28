@@ -21,5 +21,11 @@ export default defineConfig({
         `
       }
     }
+  },
+  server: {
+    port: 8964,
+    // host: 'www.corho.com',
+    open: true,
+    cors: true // 允许ajax跨域
   }
 })
