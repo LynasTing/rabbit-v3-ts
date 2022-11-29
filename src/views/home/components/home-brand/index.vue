@@ -66,7 +66,7 @@ const slideIndex = (params: number)=> {
   height: 20px;
   &::before {
     position: relative;
-    top: -5px;
+    top: -6px;
     font-size: 12px;
   }
   &.disabled {

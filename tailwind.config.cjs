@@ -5,7 +5,6 @@ module.exports = {
   content: [],
   theme: {
     extend: {},
-  
     // textColor: theme => theme('colors'),
     textColor: {
       white: 'white',

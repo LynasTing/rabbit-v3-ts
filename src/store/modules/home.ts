@@ -1,12 +1,13 @@
 import { defineStore } from 'pinia'
 import request from '@/utils/request'
-import { ApiRes, BannerItem, NewGoods, HotGoods, Brand } from '@/types/data'
+import { ApiRes, BannerItem, NewGoods, HotGoods, Brand, HomeProduct } from '@/types/data'
 export default defineStore('home', {
   state : ()=> ({
     bannerList: [] as BannerItem[],
     newGoodList: [] as NewGoods[],
     hotGoodList: [] as HotGoods[],
-    brandList: [] as Brand[]
+    brandList: [] as Brand[],
+    productList: [] as HomeProduct[]
   }),
   actions: {
     // 轮播图数据
@@ -29,6 +30,11 @@ export default defineStore('home', {
     async getBrandList() {
       const res = await request.get<ApiRes<Brand[]>>('/home/brand')
       if(res.data?.code === '1') this.brandList = res.data?.result
+    },
+    // 商品区域数据
+    async getProductList() {
+      const res = await request.get<ApiRes<HomeProduct[]>>('/home/goods')
+      if(res.data?.code === '1') this.productList = res.data?.result
     },
   }
 })

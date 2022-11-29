@@ -11,6 +11,8 @@
     <HomeFreshProduce />
     <!-- 热门品牌 -->
     <HomeBrand />
+    <!-- 主要商品 -->
+    <HomeProduct />
   </div>
 </template>
 
@@ -20,6 +22,7 @@ import HomeBanner from './components/home-banner/index.vue'
 import HomeCategory from './components/home-category/index.vue' 
 import HomeFreshProduce from './components/home-fresh-produce/index.vue'
 import HomeBrand from './components/home-brand/index.vue'
+import HomeProduct from './components/home-product/index.vue'
 const { home }  = useStore() 
 home.getBannerList()
   

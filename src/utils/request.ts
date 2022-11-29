@@ -1,6 +1,6 @@
 import axios from "axios";
 const _axios = axios.create({
-  baseURL: 'http://pcapi-xiaotuxian-front.itheima.net/',
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   timeout: 5000
 })
 // 请求拦截
