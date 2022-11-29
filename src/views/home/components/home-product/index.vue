@@ -21,7 +21,7 @@ const target = useLazyData(()=>{
       <main class="flex">
         <!-- 左侧竖图 -->
         <RouterLink to="/" class="cover relative mr-3">
-          <img :src="item.picture" class="w-full h-full" />
+          <img :src="item.picture" class="w-full h-full  object-cover" />
           <strong class="label absolute font-normal flex text-lg text-white">
             <div>{{ item.name }}</div>
             <div>{{ item.saleInfo.slice(0, 4)}}</div>
@@ -29,7 +29,7 @@ const target = useLazyData(()=>{
         </RouterLink>
         <ul class="grid grid-cols-4 gap-4 flex-1">
           <li v-for="good_item in item.goods" :key="good_item.id" class="goods_item py-2 px-7 overflow-hidden relative" >
-            <img v-lazy="good_item.picture" class="w-40 h-40 block my-0 mx-auto ">
+            <img v-lazy="good_item.picture" class="w-40 h-40 block my-0 mx-auto">
             <h4 class="h-11 font-normal text-base mt-1">{{ good_item.name }}</h4>
             <div class="text-666 h-5 truncate w-full mb-3 mt-3">{{ good_item.desc }}</div>
             <p class="text-xl text-priceColor">&yen;{{ good_item.price }}</p>
@@ -87,6 +87,7 @@ const target = useLazyData(()=>{
   .goods_item {
     border: 1px solid transparent;
     transition: all .5s;
+
     .extra {
       height: 86px;
       transform: translate3d(0, 100%, 0);
