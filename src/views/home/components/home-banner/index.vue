@@ -8,7 +8,8 @@
 <script lang="ts" setup>
 import useStore from '@/store'
 import Carousel from '@/components/carousel/index.vue'
-const { home } = useStore()
+const { home }  = useStore() 
+home.getBannerList()
 </script>
 
 <style scoped lang="scss">

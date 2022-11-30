@@ -13,19 +13,18 @@
     <HomeBrand />
     <!-- 主要商品 -->
     <HomeProduct />
+    <!-- 最新专题 -->
+    <HomeSpecial class="bg-page-f5" />
   </div>
 </template>
 
 <script setup lang='ts' name="Home">
-import useStore from '@/store'
 import HomeBanner from './components/home-banner/index.vue' 
 import HomeCategory from './components/home-category/index.vue' 
 import HomeFreshProduce from './components/home-fresh-produce/index.vue'
 import HomeBrand from './components/home-brand/index.vue'
 import HomeProduct from './components/home-product/index.vue'
-const { home }  = useStore() 
-home.getBannerList()
-  
+import HomeSpecial from './components/home-special/index.vue'
 </script>
 
 <style lang='scss' scoped>
