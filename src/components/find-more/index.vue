@@ -1,5 +1,4 @@
 <script setup lang='ts' name="FindMore">
-  import { defineProps } from 'vue'
   const props = defineProps({
     path: {
       type: String,
@@ -8,7 +7,7 @@
   })
 </script>
 <template>
-  <div class="find_more">
+  <div class="find_more hover:text-xtxColor">
     <RouterLink :to="props.path">
       <span class="text-base mr-1 text-999 ">
         <slot>查看更多</slot>
