@@ -29,7 +29,7 @@ export type BannerItem = {
   type: string
 }
 // 新鲜好物
-export type NewGoods = {
+export type GoodsItem = {
   desc: string
   id: string
   name: string

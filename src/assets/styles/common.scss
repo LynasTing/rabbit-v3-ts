@@ -6,6 +6,11 @@
   width: 1240px;
   margin: 0 auto;
 }
+.text_ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 // 离开的淡出动画
 .fade {
   &-leave-from {

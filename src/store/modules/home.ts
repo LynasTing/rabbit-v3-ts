@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
 import request from '@/utils/request'
-import { ApiRes, BannerItem, NewGoods, HotGoods, Brand, HomeProduct, Special } from '@/types/data'
+import { ApiRes, BannerItem, GoodsItem, HotGoods, Brand, HomeProduct, Special } from '@/types/data'
 export default defineStore('home', {
   state : ()=> ({
     bannerList: [] as BannerItem[],
-    newGoodList: [] as NewGoods[],
+    newGoodList: [] as GoodsItem[],
     hotGoodList: [] as HotGoods[],
     brandList: [] as Brand[],
     productList: [] as HomeProduct[],
@@ -22,7 +22,7 @@ export default defineStore('home', {
     },
     // 人气推荐数据
     async getRecommend() {
-      const newRes = await request.get<ApiRes<NewGoods[]>>('/home/new')
+      const newRes = await request.get<ApiRes<GoodsItem[]>>('/home/new')
       if(newRes.data?.code === '1') this.newGoodList = newRes.data?.result
       const hotRes = await request.get<ApiRes<HotGoods[]>>('/home/hot')
       if(hotRes.data?.code === '1') this.hotGoodList = hotRes.data?.result
