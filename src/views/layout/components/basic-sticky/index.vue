@@ -6,7 +6,7 @@
       <RouterLink class="logo" to="/" />
       <ul class="flex-1 flex items-center justify-between px-10">
         <li v-for="(item, index) in category.categoryList" :key="index">
-          <RouterLink :to="`/category/:${item.id}`" class="pb-2 hover:text-xtxColor">{{ item.name }}</RouterLink>
+          <RouterLink :to="`/category/${item.id}`" class="pb-2 hover:text-xtxColor">{{ item.name }}</RouterLink>
         </li>
       </ul>
       <div class="right flex items-center w-56 pl-10">

@@ -8,7 +8,7 @@
       <!-- tab -->
       <ul class="flex goods items-center justify-between relative">
         <li v-for="(item, index) in category.categoryList" :key="index" @mouseenter="category.show(item.id)" @mouseleave="category.hide(item.id)">
-          <RouterLink :to="`/category/:${item.id}`" class="pb-2">{{ item.name }}</RouterLink>
+          <RouterLink :to="`/category/${item.id}`" class="pb-2">{{ item.name }}</RouterLink>
           <!-- 二级菜单 -->
           <div class="cus-container bg-white absolute h-0 overflow-hidden opacity-0 submenu z-40" :class="{subShow: item.open}">
             <ul class="flex flex-wrap px-16 items-center h-full">
