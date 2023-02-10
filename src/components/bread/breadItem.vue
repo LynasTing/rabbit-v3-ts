@@ -1,4 +1,4 @@
-<script setup lang='ts' name="BreadItem">
+<script setup lang='ts' name="XtxBreadItem">
 // 分隔符数据是位于Bread组件中，而分隔符数据的使用时是在底层的组件中
 import { inject } from 'vue'
 defineProps({

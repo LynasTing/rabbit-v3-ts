@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
 import request from '@/utils/request'
-import { ApiRes, CategoryItem, TopCategory } from '@/types/data'
+import { ApiRes, CategoryItem, TopCategory, SubCategory } from '@/types/data'
 import { goodsCategories } from './constants'
 const defaultCategory = goodsCategories.map(item => {
   return {
@@ -10,7 +10,9 @@ const defaultCategory = goodsCategories.map(item => {
 export default defineStore('category', {
   state: ()=> ({
     categoryList: defaultCategory as CategoryItem[],
-    topCategory: {} as TopCategory
+    topCategory: {} as TopCategory,
+    subCategory: {} as SubCategory
+
   }),
   actions: {
     async getAllCategory() {
@@ -31,12 +33,17 @@ export default defineStore('category', {
       // .then((json) => ( console.log(`json + ::>>`, json)))
       // .catch((err) => (console.log(`err + ::>>`, err)))
     },
+    // 获取二级分类数据
+    async getSubFilter(id: string) {
+      const res = await request.get<ApiRes<SubCategory>>('/category/sub/filter', {
+        params: { id }
+      })
+      this.subCategory = res.data.result
+    },
     // 获取分类导航数据
     async getTopCategory(id: string) {
       const res = await request.get<ApiRes<TopCategory>>('/category', {
-        params: {
-          id
-        }
+        params: { id }
       })
       this.topCategory = res.data.result
     },

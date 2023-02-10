@@ -4,15 +4,15 @@ import Carousel from '@/components/carousel/index.vue'
 import FindMore from '@/components/find-more/index.vue'
 import { useIntersectionObserver } from '@vueuse/core'
 import defaultImg from '@/assets/imgs/200.png'
-import Bread from '@/components/bread/index.vue'
-import BreadItem from '@/components/bread/breadItem.vue'
+import XtxBread from '@/components/bread/index.vue'
+import XtxBreadItem from '@/components/bread/breadItem.vue'
 export default {
   install(app: App) {
     app.component('XtxSkeleton', XtxSkeleton)
     app.component('Carousel', Carousel)
     app.component('FindMore', FindMore)
-    app.component('XtxBread', Bread)
-    app.component('XtxBreadItem', BreadItem)
+    app.component('XtxBread', XtxBread)
+    app.component('XtxBreadItem', XtxBreadItem)
     /**
      * vue3自定义指令
      * app = createApp(App)
