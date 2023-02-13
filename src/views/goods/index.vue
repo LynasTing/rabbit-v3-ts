@@ -3,6 +3,7 @@ import useStore from '@/store'
 import { useRoute } from 'vue-router'
 import { watchEffect } from 'vue'
 import { storeToRefs } from 'pinia';
+import GoodsImage from './components/goods-image/index.vue'
 const { goods } = useStore()
 const route = useRoute()
 // 当商品详情页跳转到分类页, 或分类页跳转到商品详情页时会报错, 因此需要使用 watchEffect 来进行判断
@@ -11,34 +12,48 @@ watchEffect(() => {
   goods.getGoodsInfo(id)
 })
 const { info } = storeToRefs(goods)
-console.log(`info + ::>>`, info)
 </script>
 
 <template>
-  <div class="cus-container" v-if="info.categories">
-    <!-- 面包屑 -->
-    <XtxBread>
-      <XtxBreadItem to="/">首页</XtxBreadItem>
-      <XtxBreadItem :to="`/category/${info.categories[1].id}`">{{ info.categories[1].name }}</XtxBreadItem>
-      <XtxBreadItem :to="`/category/${info.categories[0].id}`">{{ info.categories[0].name }}</XtxBreadItem>
-      <XtxBreadItem to="/">{{ info.name }}</XtxBreadItem>
-    </XtxBread>
-    <!-- 商品信息 -->
-    <div class="info_area bg-white"></div>
-    <!-- 商品详情 -->
-    <div class="flex mt-5"></div>    
-    <div class="goods_article mr-5">
-      <!-- 商品+评价 -->
-      <div class="goods_tabs bg-white"></div>
+  <div class="bg-page-f5">
+    <div class="cus-container" v-if="info.categories">
+      <!-- 面包屑 -->
+      <XtxBread>
+        <XtxBreadItem to="/">首页</XtxBreadItem>
+        <XtxBreadItem :to="`/category/${info.categories[1].id}`">{{ info.categories[1].name }}</XtxBreadItem>
+        <XtxBreadItem :to="`/category/${info.categories[0].id}`">{{ info.categories[0].name }}</XtxBreadItem>
+        <XtxBreadItem to="/">{{ info.name }}</XtxBreadItem>
+      </XtxBread>
+      <!-- 商品信息 -->
+      <div class="info_area bg-white">
+        <div class="media">
+          <GoodsImage :images="info.mainPictures" />
+        </div>
+        <div class="flex-1 "></div>
+      </div>
+      <!-- 商品详情 -->
+      <div class="flex mt-5"></div>    
+      <div class="goods_article mr-5">
+        <!-- 商品+评价 -->
+        <div class="goods_tabs bg-white"></div>
+      </div>
+      <!-- 24热榜+专题推荐 -->
+      <div class="goods_aside"></div>
     </div>
-    <!-- 24热榜+专题推荐 -->
-    <div class="goods_aside"></div>
   </div>
 </template>
 
 <style lang='scss' scoped>
 .info_area {
   min-height: 600px;
+  .media {
+    width: 580px;
+    height: 600px;
+    padding: 30px 50px;
+  }
+  &>div:nth-child(2) {
+    padding: 30 30 30 0;
+  }
 }
 .goods_article {
   width: 940px;
