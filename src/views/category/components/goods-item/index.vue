@@ -10,7 +10,7 @@ defineProps({
 })
 </script>
 <template>
-  <RouterLink to="/" class="goods_item block w-56 px-7 py-5 text-center">
+  <RouterLink :to="`/goods/${goods.id}`" class="goods_item block w-56 px-7 py-5 text-center">
     <img v-lazy="goods.picture" class="w-40 h-40">
     <p class="text-base text_ellipsis">{{ goods.name }}</p>
     <p class="text-999 h-7 text_ellipsis">{{ goods.desc }}</p>
