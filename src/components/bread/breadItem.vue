@@ -11,7 +11,7 @@ const separator = inject('separator')
 </script>
 
 <template>
-  <div class="bread_item">
+  <div class="xtx_bread_item">
     <!-- 如果to存在 有值 那就渲染一个router-link标签，否则 就渲染一个span标签 -->
     <router-link v-if="to" :to="to">
       <slot />
@@ -24,7 +24,7 @@ const separator = inject('separator')
 </template>
 
 <style lang='scss' scoped>
-.bread_item {
+.xtx_bread_item {
   i {
     margin: 0 6px;
     font-size: 10px;

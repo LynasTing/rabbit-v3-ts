@@ -34,7 +34,6 @@ watchEffect(()=> {
   <div class="cus-container bg-page-f5">
     <!-- 面包屑 -->
     <XtxBread>
-      {{ category.subCategory.parentName }}啊啊啊啊啊啊
       <XtxBreadItem to="/">首页</XtxBreadItem>
       <XtxBreadItem :to="`/category/${category.subCategory.parentId}`">{{ category.subCategory.parentName }}</XtxBreadItem>
       <XtxBreadItem>{{ category.subCategory.name }}</XtxBreadItem>
